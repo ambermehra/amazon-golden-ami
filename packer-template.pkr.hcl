@@ -4,6 +4,10 @@ packer {
       version = ">= 1.3.4"
       source  = "github.com/hashicorp/amazon"
     }
+    chef = {
+      source  = "github.com/hashicorp/chef"
+      version = ">=1.0.0"
+    }
   }
 }
 
