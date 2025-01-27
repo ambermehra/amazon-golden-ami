@@ -26,6 +26,9 @@ jobs:
       run: |
         curl -L https://omnitruck.chef.io/install.sh | sudo bash -s -- -P chefdk
     
+    - name: Packer inititalization
+      run: packer init 
+      
     - name: Validate Packer Template
       run: packer validate packer-template.pkr.hcl
     
