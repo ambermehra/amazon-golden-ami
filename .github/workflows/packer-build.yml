@@ -24,8 +24,7 @@ jobs:
     
     - name: Install Chef
       run: |
-        wget https://packages.chef.io/files/stable/chef-workstation/latest/ubuntu/latest/chef-workstation_amd64.deb
-        sudo dpkg -i chef-workstation_amd64.deb
+        curl -L https://omnitruck.chef.io/install.sh | sudo bash -s -- -P chefdk
     
     - name: Validate Packer Template
       run: packer validate packer-template.json
