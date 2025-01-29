@@ -34,3 +34,8 @@ jobs:
     
     - name: Build Packer Image
       run: packer build packer-template.pkr.hcl
+    
+    - name: Get the AMI ID
+      run: |
+        AMI_ID=$(aws ec2 describe-images --filters "Name=name,Values=packer-*}" --query "Images | sort_by(@, &CreationDate) | [-1].ImageId" --output text)
+        echo "Latest AMI ID: $AMI_ID"

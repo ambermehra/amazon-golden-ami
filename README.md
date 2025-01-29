@@ -38,7 +38,4 @@ This project includes a GitHub Actions workflow to automate the process of build
 6. **Packer Validation:** The workflow validates the Packer template using `packer validate`.
 7. **Build Packer Image:** Finally, the workflow runs `packer build` to create the custom AMI "GOLDEN IMAGE name will be appear in this stage".
 
-### Workflow YAML File
-
-Below is the GitHub Actions workflow YAML file (`.github/workflows/packer-ami-build.yml`):
-
+### GOLDEN AMI ID : You can find AMI ID name on github action Get the AMI ID stage
